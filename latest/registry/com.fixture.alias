@@ -1,0 +1,23 @@
+{
+  "versions": {
+    "0.1.0": {
+      "version": "0.1.0",
+      "repository": {
+        "url": "https://github.com/MindTooth/renovate-test-46986"
+      }
+    },
+    "2.0.0": {
+      "version": "2.0.0",
+      "repository": {
+        "url": "https://github.com/MindTooth/renovate-test-46986"
+      },
+      "_upm": {
+        "changelog": "MATRIX_ALIAS"
+      }
+    }
+  },
+  "time": {
+    "0.1.0": "2025-01-01T00:00:00.000Z",
+    "2.0.0": "2025-01-01T00:00:00.000Z"
+  }
+}

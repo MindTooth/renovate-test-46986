@@ -1,0 +1,9 @@
+repeat-low=unity3d-packages:com.fixture.repeat@0.1.0
+repeat-low=unity3d-packages:com.fixture.repeat@0.1.0
+repeat-next=unity3d-packages:com.fixture.repeat@0.2.0
+repeat-high=unity3d-packages:com.fixture.repeat@1.0.0
+alias-a=unity3d-packages:com.fixture.alias@0.1.0
+alias-b=unity3d-packages:com.fixture.alias@0.1.0
+twin-a=unity3d-packages:com.fixture.twin-a@0.1.0
+twin-b=unity3d-packages:com.fixture.twin-b@0.1.0
+empty-control=unity3d-packages:com.fixture.empty@0.1.0

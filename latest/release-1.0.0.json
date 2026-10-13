@@ -1,0 +1,8 @@
+{
+  "tag_name": "v1.0.0",
+  "target_commitish": "350db0b33dbdc483d9f3a6c9f7a49b10a3e5851c",
+  "name": "Fixture 1.0.0",
+  "body": "MIXED_SHARED_1: previous repository release.",
+  "draft": false,
+  "prerelease": false
+}

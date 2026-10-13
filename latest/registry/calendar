@@ -1,0 +1,23 @@
+{
+  "versions": {
+    "5.5.0": {
+      "version": "5.5.0",
+      "repository": {
+        "url": "https://github.com/MindTooth/renovate-test-46986"
+      }
+    },
+    "5.5.9": {
+      "version": "5.5.9",
+      "repository": {
+        "url": "https://github.com/MindTooth/renovate-test-46986"
+      },
+      "_upm": {
+        "changelog": "DATASOURCE_UNITY_CALENDAR"
+      }
+    }
+  },
+  "time": {
+    "5.5.0": "2025-01-01T00:00:00.000Z",
+    "5.5.9": "2025-01-01T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,4 @@
+a-embedded=unity3d-packages:com.fixture.mixed-a@0.1.0
+shared-a=github-releases:MindTooth/renovate-test-46986@1.0.0
+shared-b=github-releases:MindTooth/renovate-test-46986@1.0.0
+z-embedded=unity3d-packages:com.fixture.mixed-b@0.1.0

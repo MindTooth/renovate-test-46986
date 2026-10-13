@@ -1,0 +1,8 @@
+{
+  "tag_name": "v2.0.0",
+  "target_commitish": "350db0b33dbdc483d9f3a6c9f7a49b10a3e5851c",
+  "name": "Fixture 2.0.0",
+  "body": "MIXED_SHARED_2: shared repository notes must appear once, alongside both embedded-note packages.",
+  "draft": false,
+  "prerelease": false
+}
