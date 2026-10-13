@@ -18,9 +18,15 @@ def main():
     parser.add_argument("--prefix", default="renovate/latest-46986/")
     parser.add_argument("--write", type=Path)
     parser.add_argument("--compare", type=Path)
+    parser.add_argument("--files", nargs="+")
     args = parser.parse_args()
     root = Path(__file__).resolve().parent
     expected = json.loads((root / "expectations.json").read_text())
+    if args.files:
+        unknown = set(args.files) - set(expected)
+        if unknown:
+            parser.error("Unknown fixture files: " + ", ".join(sorted(unknown)))
+        expected = {name: expected[name] for name in args.files}
     pulls = api("repos/" + args.repo + "/pulls?state=open&per_page=100")
     pulls = [p for p in pulls if p["head"]["ref"].startswith(args.prefix)]
     report = {"repository": args.repo, "prefix": args.prefix, "cases": [], "missing": []}
@@ -64,7 +70,9 @@ def main():
             })
     report["cases"].sort(key=lambda c: c["file"])
     report["missing"] = sorted(remaining)
-    report["pass"] = not remaining and all(c["pass"] for c in report["cases"])
+    names = [c["file"] for c in report["cases"]]
+    report["duplicates"] = sorted({name for name in names if names.count(name) > 1})
+    report["pass"] = not remaining and not report["duplicates"] and all(c["pass"] for c in report["cases"])
     if args.compare:
         previous = json.loads(args.compare.read_text())
         def stable(value):
@@ -77,7 +85,7 @@ def main():
         "cases": [{k: c[k] for k in ["file", "number", "checks", "pass", "actualMarkers", "actualSummaries", "actualVersions"]} for c in report["cases"]],
         **({"retryStable": report["retryStable"]} if "retryStable" in report else {}),
     }, indent=2))
-    return 0 if report["pass"] else 1
+    return 0 if report["pass"] and report.get("retryStable", True) else 1
 
 
 if __name__ == "__main__":

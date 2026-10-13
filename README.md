@@ -1,5 +1,10 @@
 # Renovate #46986 reproduction
 
+The [latest regression matrix](latest/README.md) tests commit `d356ad69`
+with broader identity, source-isolation, and retry checks. Five fixture groups
+pass, all 22 dependency references update correctly, and one remaining
+cross-registry note-loss regression is reproduced.
+
 Reproduces duplicate embedded release notes after
 [Renovate #46733](https://github.com/renovatebot/renovate/pull/46733), and checks
 the fix in [#46986](https://github.com/renovatebot/renovate/pull/46986).
@@ -68,7 +73,7 @@ The correct PR contains both note markers. Before #46986 both should be present;
 with #46986 one is incorrectly suppressed. Encoding the key as a JSON tuple
 should retain both.
 
-## Verified live results
+## Historical live results for `254f22fc`
 
 The live self-hosted runs completed successfully on 2026-10-13 using the two
 exact source commits above. Both consumed fixture commit `fe83254` for the
