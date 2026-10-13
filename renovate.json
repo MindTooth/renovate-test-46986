@@ -100,7 +100,8 @@
         "latest/matrix-deps.txt"
       ],
       "groupName": "Latest dependency identity matrix",
-      "groupSlug": "latest-matrix"
+      "groupSlug": "latest-matrix",
+      "separateMajorMinor": false
     },
     {
       "matchFileNames": [

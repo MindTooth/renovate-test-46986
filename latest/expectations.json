@@ -38,7 +38,10 @@
       "2.0.0",
       "2.0.0",
       "2.0.0"
-    ]
+    ],
+    "summaries": {
+      "empty-control": 0
+    }
   },
   "latest/mixed-deps.txt": {
     "markers": {
