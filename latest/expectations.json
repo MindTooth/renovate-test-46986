@@ -5,21 +5,14 @@
       "com.unity.inputsystem": 1,
       "com.unity.cinemachine": 1
     },
-    "versions": [
-      "1.15.0",
-      "1.15.0",
-      "3.1.2"
-    ]
+    "versions": ["1.15.0", "1.15.0", "3.1.2"]
   },
   "key-collision-deps.txt": {
     "markers": {
       "COLLISION_NOTE_A": 1,
       "COLLISION_NOTE_B": 1
     },
-    "versions": [
-      "2.0.0",
-      "1.0.0-2.0.0"
-    ]
+    "versions": ["2.0.0", "1.0.0-2.0.0"]
   },
   "latest/matrix-deps.txt": {
     "markers": {
@@ -49,12 +42,7 @@
       "MIXED_SHARED_2": 1,
       "MIXED_EMBED_B": 1
     },
-    "versions": [
-      "2.0.0",
-      "2.0.0",
-      "2.0.0",
-      "2.0.0"
-    ]
+    "versions": ["2.0.0", "2.0.0", "2.0.0", "2.0.0"]
   },
   "latest/datasource-deps.txt": {
     "markers": {
@@ -64,19 +52,13 @@
       "calendar-unity": 1,
       "calendar-nextcloud": 1
     },
-    "versions": [
-      "5.5.9",
-      "5.5.9"
-    ]
+    "versions": ["5.5.9", "5.5.9"]
   },
   "latest/registry-deps.txt": {
     "markers": {
       "REGISTRY_A": 1,
       "REGISTRY_B": 1
     },
-    "versions": [
-      "2.0.0",
-      "2.0.0"
-    ]
+    "versions": ["2.0.0", "2.0.0"]
   }
 }

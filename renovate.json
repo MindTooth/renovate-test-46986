@@ -1,14 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "enabledManagers": [
-    "custom.regex"
-  ],
+  "enabledManagers": ["custom.regex"],
   "customManagers": [
     {
       "customType": "regex",
-      "managerFilePatterns": [
-        "/^unity-deps\\.txt$/"
-      ],
+      "managerFilePatterns": ["/^unity-deps\\.txt$/"],
       "matchStrings": [
         "(?<depName>com\\.unity\\.[a-z]+)=(?<currentValue>[^\\s]+)"
       ],
@@ -17,9 +13,7 @@
     },
     {
       "customType": "regex",
-      "managerFilePatterns": [
-        "/^key-collision-deps\\.txt$/"
-      ],
+      "managerFilePatterns": ["/^key-collision-deps\\.txt$/"],
       "matchStrings": [
         "(?<depName>com\\.unity\\.[a-z0-9.-]+)=(?<currentValue>[^\\s]+)"
       ],
@@ -38,9 +32,7 @@
     },
     {
       "customType": "regex",
-      "managerFilePatterns": [
-        "/^latest\\/registry-deps\\.txt$/"
-      ],
+      "managerFilePatterns": ["/^latest\\/registry-deps\\.txt$/"],
       "matchStrings": [
         "(?<depName>[a-z][a-z0-9-]*)=(?<packageName>[^@\\s]+)@(?<currentValue>[^\\s]+) registry=(?<registryUrl>https://[^\\s]+)"
       ],
@@ -50,19 +42,13 @@
   ],
   "packageRules": [
     {
-      "matchDatasources": [
-        "unity3d-packages"
-      ],
+      "matchDatasources": ["unity3d-packages"],
       "groupName": "Unity embedded notes",
       "groupSlug": "unity-embedded-notes"
     },
     {
-      "matchFileNames": [
-        "key-collision-deps.txt"
-      ],
-      "matchDatasources": [
-        "unity3d-packages"
-      ],
+      "matchFileNames": ["key-collision-deps.txt"],
+      "matchDatasources": ["unity3d-packages"],
       "registryUrls": [
         "https://raw.githubusercontent.com/MindTooth/renovate-test-46986/master/registry"
       ],
@@ -71,15 +57,11 @@
       "ignoreUnstable": false
     },
     {
-      "matchPackageNames": [
-        "com.unity.inputsystem"
-      ],
+      "matchPackageNames": ["com.unity.inputsystem"],
       "allowedVersions": "<=1.15.0"
     },
     {
-      "matchPackageNames": [
-        "com.unity.cinemachine"
-      ],
+      "matchPackageNames": ["com.unity.cinemachine"],
       "allowedVersions": "<=3.1.2"
     },
     {
@@ -88,59 +70,41 @@
         "latest/mixed-deps.txt",
         "latest/datasource-deps.txt"
       ],
-      "matchDatasources": [
-        "unity3d-packages"
-      ],
+      "matchDatasources": ["unity3d-packages"],
       "registryUrls": [
         "https://raw.githubusercontent.com/MindTooth/renovate-test-46986/master/latest/registry"
       ]
     },
     {
-      "matchFileNames": [
-        "latest/matrix-deps.txt"
-      ],
+      "matchFileNames": ["latest/matrix-deps.txt"],
       "groupName": "Latest dependency identity matrix",
       "groupSlug": "latest-matrix",
       "separateMajorMinor": false
     },
     {
-      "matchFileNames": [
-        "latest/mixed-deps.txt"
-      ],
+      "matchFileNames": ["latest/mixed-deps.txt"],
       "groupName": "Latest embedded and shared notes",
       "groupSlug": "latest-mixed"
     },
     {
-      "matchFileNames": [
-        "latest/datasource-deps.txt"
-      ],
+      "matchFileNames": ["latest/datasource-deps.txt"],
       "groupName": "Latest datasource isolation",
       "groupSlug": "latest-datasource"
     },
     {
-      "matchFileNames": [
-        "latest/registry-deps.txt"
-      ],
+      "matchFileNames": ["latest/registry-deps.txt"],
       "groupName": "Latest registry isolation",
       "groupSlug": "latest-registry"
     },
     {
-      "matchFileNames": [
-        "latest/matrix-deps.txt"
-      ],
-      "matchPackageNames": [
-        "com.fixture.repeat"
-      ],
+      "matchFileNames": ["latest/matrix-deps.txt"],
+      "matchPackageNames": ["com.fixture.repeat"],
       "matchCurrentVersion": "<1.0.0",
       "allowedVersions": "<=2.0.0"
     },
     {
-      "matchFileNames": [
-        "latest/datasource-deps.txt"
-      ],
-      "matchDatasources": [
-        "nextcloud"
-      ],
+      "matchFileNames": ["latest/datasource-deps.txt"],
+      "matchDatasources": ["nextcloud"],
       "registryUrls": [
         "https://apps.nextcloud.com/api/v1/platform/30.0.0/apps.json"
       ],
