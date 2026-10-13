@@ -10,6 +10,15 @@
       ],
       "datasourceTemplate": "unity3d-packages",
       "versioningTemplate": "semver"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/^key-collision-deps\\.txt$/"],
+      "matchStrings": [
+        "(?<depName>com\\.unity\\.[a-z0-9.-]+)=(?<currentValue>[^\\s]+)"
+      ],
+      "datasourceTemplate": "unity3d-packages",
+      "versioningTemplate": "semver"
     }
   ],
   "packageRules": [
@@ -17,6 +26,16 @@
       "matchDatasources": ["unity3d-packages"],
       "groupName": "Unity embedded notes",
       "groupSlug": "unity-embedded-notes"
+    },
+    {
+      "matchFileNames": ["key-collision-deps.txt"],
+      "matchDatasources": ["unity3d-packages"],
+      "registryUrls": [
+        "https://raw.githubusercontent.com/MindTooth/renovate-test-46986/master/registry"
+      ],
+      "groupName": "Embedded notes key collision",
+      "groupSlug": "embedded-notes-key-collision",
+      "ignoreUnstable": false
     },
     {
       "matchPackageNames": ["com.unity.inputsystem"],

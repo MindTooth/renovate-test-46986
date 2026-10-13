@@ -48,4 +48,24 @@ Use the normal `RENOVATE_TOKEN` environment variable and install the checkout's
 dependencies first. Add `--dry-run=full` to inspect proposed PRs without writing.
 The repository configuration does not select the Renovate implementation.
 
+## Distinct-package key collision
+
+`key-collision-deps.txt` uses two synthetic package names and frozen registry
+responses served from this repository's `registry/` directory. These are
+illustrative packages, not packages published by Unity. Renovate still uses the
+real `unity3d-packages` datasource, lookup, grouping, and rendering paths;
+no HTTP mocks are involved.
+
+| Package | Installed | Target | Notes marker |
+| --- | --- | --- | --- |
+| com.unity.foo-1.0.0 | 0.1.0 | 2.0.0 | COLLISION_NOTE_A |
+| com.unity.foo | 0.1.0 | 1.0.0-2.0.0 | COLLISION_NOTE_B |
+
+The collision group enables prerelease updates deliberately. Both package/target
+pairs produce the key
+`unity3d-packages-com.unity.foo-1.0.0-2.0.0` with #46986's hyphen concatenation.
+The correct PR contains both note markers. Before #46986 both should be present;
+with #46986 one is incorrectly suppressed. Encoding the key as a JSON tuple
+should retain both.
+
 Live results will be linked here after the runs complete.

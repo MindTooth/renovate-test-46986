@@ -1,0 +1,23 @@
+{
+  "versions": {
+    "0.1.0": {
+      "version": "0.1.0",
+      "repository": {
+        "url": "https://github.com/MindTooth/renovate-test-46986"
+      }
+    },
+    "1.0.0-2.0.0": {
+      "version": "1.0.0-2.0.0",
+      "repository": {
+        "url": "https://github.com/MindTooth/renovate-test-46986"
+      },
+      "_upm": {
+        "changelog": "COLLISION_NOTE_B: These notes belong to com.unity.foo version 1.0.0-2.0.0."
+      }
+    }
+  },
+  "time": {
+    "0.1.0": "2020-01-01T00:00:00.000Z",
+    "1.0.0-2.0.0": "2025-01-01T00:00:00.000Z"
+  }
+}
