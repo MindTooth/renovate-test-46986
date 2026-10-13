@@ -1,2 +1,2 @@
-calendar-unity=unity3d-packages:calendar@5.5.0
-calendar-nextcloud=nextcloud:calendar@5.5.0
+calendar-unity=unity3d-packages:calendar@5.5.9
+calendar-nextcloud=nextcloud:calendar@5.5.9
