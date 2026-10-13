@@ -1,2 +1,2 @@
-registry-a=com.fixture.registry@0.1.0 registry=https://raw.githubusercontent.com/MindTooth/renovate-test-46986/master/latest/registry-a
-registry-b=com.fixture.registry@0.1.0 registry=https://raw.githubusercontent.com/MindTooth/renovate-test-46986/master/latest/registry-b
+registry-a=com.fixture.registry@2.0.0 registry=https://raw.githubusercontent.com/MindTooth/renovate-test-46986/master/latest/registry-a
+registry-b=com.fixture.registry@2.0.0 registry=https://raw.githubusercontent.com/MindTooth/renovate-test-46986/master/latest/registry-b
