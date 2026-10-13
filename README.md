@@ -1,0 +1,51 @@
+# Renovate #46986 reproduction
+
+Reproduces duplicate embedded release notes after
+[Renovate #46733](https://github.com/renovatebot/renovate/pull/46733), and checks
+the fix in [#46986](https://github.com/renovatebot/renovate/pull/46986).
+
+This GitHub repository uses Renovate's built-in `unity3d-packages` datasource
+through a custom regex manager. It requires no Unity project or Azure account.
+
+## Fixture
+
+| Package | Installed versions | Target ceiling |
+| --- | --- | --- |
+| com.unity.inputsystem | 1.13.0 and 1.14.0 | 1.15.0 |
+| com.unity.cinemachine | 3.1.0 | 3.1.2 |
+
+The three updates are grouped into one PR. Different installed Input System
+versions deliberately survive upgrade deduplication while receiving the same
+target release notes. Cinemachine checks that a different package keeps its notes.
+
+## Compare
+
+Run the same repository configuration with:
+
+1. Commit `01303d3d1f828094ca97e391478e99a731e53067`, the parent of #46986,
+   which already contains #46733.
+2. Commit `254f22fc668458df493cfa33460aa36cb91f5463`, the #46986 branch.
+
+Expected release-note sections:
+
+| Implementation | Input System 1.15.0 | Cinemachine 3.1.2 |
+| --- | --- | --- |
+| Before #46986 | Twice, with identical bodies | Once |
+| With #46986 | Once | Once |
+
+Keep `unity-deps.txt` on the default branch unchanged and do not merge the bot
+PRs while comparing. Separate branch prefixes preserve both results:
+
+```bash
+# From the baseline Renovate source checkout:
+LOG_LEVEL=debug pnpm start --platform=github --onboarding=false --branch-prefix=renovate/before-46986/ MindTooth/renovate-test-46986
+
+# From the #46986 Renovate source checkout:
+LOG_LEVEL=debug pnpm start --platform=github --onboarding=false --branch-prefix=renovate/with-46986/ MindTooth/renovate-test-46986
+```
+
+Use the normal `RENOVATE_TOKEN` environment variable and install the checkout's
+dependencies first. Add `--dry-run=full` to inspect proposed PRs without writing.
+The repository configuration does not select the Renovate implementation.
+
+Live results will be linked here after the runs complete.

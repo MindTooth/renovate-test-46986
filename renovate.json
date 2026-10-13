@@ -1,0 +1,32 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "enabledManagers": ["custom.regex"],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/^unity-deps\\.txt$/"],
+      "matchStrings": [
+        "(?<depName>com\\.unity\\.[a-z]+)=(?<currentValue>[^\\s]+)"
+      ],
+      "datasourceTemplate": "unity3d-packages",
+      "versioningTemplate": "semver"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["unity3d-packages"],
+      "groupName": "Unity embedded notes",
+      "groupSlug": "unity-embedded-notes"
+    },
+    {
+      "matchPackageNames": ["com.unity.inputsystem"],
+      "allowedVersions": "<=1.15.0"
+    },
+    {
+      "matchPackageNames": ["com.unity.cinemachine"],
+      "allowedVersions": "<=3.1.2"
+    }
+  ],
+  "dependencyDashboard": false,
+  "automerge": false
+}
