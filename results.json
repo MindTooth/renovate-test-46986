@@ -1,0 +1,71 @@
+{
+  "verifiedOn": "2026-10-13",
+  "fixtureCommit": "fe83254",
+  "runner": "Renovate source checkouts, live GitHub platform and HTTP datasources, Node.js 24.19.0",
+  "runs": [
+    {
+      "pullRequest": "https://github.com/MindTooth/renovate-test-46986/pull/1",
+      "number": 1,
+      "sourceCommit": "01303d3d1f828094ca97e391478e99a731e53067",
+      "branch": "renovate/before-46986/unity-embedded-notes",
+      "case": "duplicate-embedded-notes",
+      "releaseNoteSections": {
+        "inputSystem": 2,
+        "cinemachine": 1
+      },
+      "markers": {
+        "COLLISION_NOTE_A": false,
+        "COLLISION_NOTE_B": false
+      },
+      "updatesTable": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [com.unity.cinemachine](https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/manual/index.html) ([changelog](https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/changelog/CHANGELOG.html)) | patch | `3.1.0` → `3.1.2` |\n| [com.unity.inputsystem](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.20/manual/index.html) ([changelog](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.15/changelog/CHANGELOG.html)) | minor | `1.14.0` → `1.15.0` |\n| [com.unity.inputsystem](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.20/manual/index.html) ([changelog](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.15/changelog/CHANGELOG.html)) | minor | `1.13.0` → `1.15.0` |\n"
+    },
+    {
+      "pullRequest": "https://github.com/MindTooth/renovate-test-46986/pull/2",
+      "number": 2,
+      "sourceCommit": "01303d3d1f828094ca97e391478e99a731e53067",
+      "branch": "renovate/before-46986/major-embedded-notes-key-collision",
+      "case": "distinct-package-key-collision",
+      "releaseNoteSections": {
+        "inputSystem": 0,
+        "cinemachine": 0
+      },
+      "markers": {
+        "COLLISION_NOTE_A": true,
+        "COLLISION_NOTE_B": true
+      },
+      "updatesTable": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [com.unity.foo](https://redirect.github.com/MindTooth/renovate-test-46986) | major | `0.1.0` → `1.0.0-2.0.0` |\n| [com.unity.foo-1.0.0](https://redirect.github.com/MindTooth/renovate-test-46986) | major | `0.1.0` → `2.0.0` |\n"
+    },
+    {
+      "pullRequest": "https://github.com/MindTooth/renovate-test-46986/pull/3",
+      "number": 3,
+      "sourceCommit": "254f22fc668458df493cfa33460aa36cb91f5463",
+      "branch": "renovate/with-46986/unity-embedded-notes",
+      "case": "duplicate-embedded-notes",
+      "releaseNoteSections": {
+        "inputSystem": 1,
+        "cinemachine": 1
+      },
+      "markers": {
+        "COLLISION_NOTE_A": false,
+        "COLLISION_NOTE_B": false
+      },
+      "updatesTable": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [com.unity.cinemachine](https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/manual/index.html) ([changelog](https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/changelog/CHANGELOG.html)) | patch | `3.1.0` → `3.1.2` |\n| [com.unity.inputsystem](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.20/manual/index.html) ([changelog](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.15/changelog/CHANGELOG.html)) | minor | `1.14.0` → `1.15.0` |\n| [com.unity.inputsystem](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.20/manual/index.html) ([changelog](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.15/changelog/CHANGELOG.html)) | minor | `1.13.0` → `1.15.0` |\n"
+    },
+    {
+      "pullRequest": "https://github.com/MindTooth/renovate-test-46986/pull/4",
+      "number": 4,
+      "sourceCommit": "254f22fc668458df493cfa33460aa36cb91f5463",
+      "branch": "renovate/with-46986/major-embedded-notes-key-collision",
+      "case": "distinct-package-key-collision",
+      "releaseNoteSections": {
+        "inputSystem": 0,
+        "cinemachine": 0
+      },
+      "markers": {
+        "COLLISION_NOTE_A": false,
+        "COLLISION_NOTE_B": true
+      },
+      "updatesTable": "This PR contains the following updates:\n\n| Package | Update | Change |\n|---|---|---|\n| [com.unity.foo](https://redirect.github.com/MindTooth/renovate-test-46986) | major | `0.1.0` → `1.0.0-2.0.0` |\n| [com.unity.foo-1.0.0](https://redirect.github.com/MindTooth/renovate-test-46986) | major | `0.1.0` → `2.0.0` |\n"
+    }
+  ]
+}
